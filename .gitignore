@@ -1,0 +1,13 @@
+# Development
+/.project
+/.settings/
+/.buildpath
+
+# Composer
+/vendor/
+/composer.phar
+/composer.lock
+
+# PHAR-Composer
+/phar-composer.phar
+/wordpress-backbone-wizard.phar

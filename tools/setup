@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ ! -f "composer.phar" ] ; then
+    curl -sS https://getcomposer.org/installer | php
+fi
+
+php composer.phar self-update
+
+if [ ! -f "composer.lock" ] ; then
+    php composer.phar install
+else
+    php composer.phar update
+fi
+
+if [ ! -f "phar-composer.phar" ] ; then
+    wget http://www.lueck.tv/phar-composer/phar-composer.phar
+fi
+
+echo "Setup completed."

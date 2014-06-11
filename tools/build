@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -f "composer.phar" -o ! -f "phar-composer.phar" ] ; then
+    echo "Required files missing, run 'setup' first."
+    exit 1
+fi
+
+php -d phar.readonly=off phar-composer.phar build .
